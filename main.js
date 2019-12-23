@@ -6,7 +6,8 @@ let mainWindow,
 let windowParams = {
   width: 1440,
   height: 810,
-  show: false
+  show: false,
+  frame: true
 };
 
 function createWindow() {

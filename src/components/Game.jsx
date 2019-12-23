@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import WebGL from "./WebGL/WebGL";
+
 class Game extends React.Component {
   constructor(props) {
     super(props);
@@ -7,7 +9,12 @@ class Game extends React.Component {
   }
 
   render() {
-    return <div>Game</div>;
+    return (
+      <div>
+        <p>WebGL</p>
+        <WebGL />
+      </div>
+    );
   }
 }
 
