@@ -1,11 +1,11 @@
 {
-  "name": "electron-react-mongodb-boilerplate",
+  "name": "rts-game",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Coderoversially/Electron-React-MongoDB-Boilerplate.git"
+    "url": "https://github.com/Coderoversially/RTS-Game.git"
   },
   "scripts": {
     "start:electron": "electron .",
@@ -41,8 +41,8 @@
     "webpack-cli": "^3.3.10"
   },
   "build": {
-    "productName": "Electron",
-    "appId": "com.electron.app",
+    "productName": "RTS Game",
+    "appId": "com.rts-game.app",
     "directories": {
       "buildResources": "app",
       "output": "dist"
