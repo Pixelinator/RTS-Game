@@ -1,6 +1,6 @@
 import GLC from "../../GLCommander";
 
-class ModelType {
+export default class ModelType {
   constructor(vertices, indices) {
     this.vertices = vertices;
     this.indices = indices;
@@ -28,5 +28,3 @@ class ModelType {
     GLC.bindElementArrayBuffer(this.indexBuffer);
   };
 }
-
-export default ModelType;

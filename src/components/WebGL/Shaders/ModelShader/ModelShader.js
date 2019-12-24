@@ -1,16 +1,15 @@
 import GLC from "../../GLCommander";
-
 import VertexSource from "../vertex";
 import FragmentSource from "../fragment";
 import Locations from "../locations";
 
-class ModelShader {
+export default class ModelShader {
   constructor() {
-    let vertexShader = GLC.createVertexShader();
+    const vertexShader = GLC.createVertexShader();
     GLC.addShaderSource(vertexShader, VertexSource);
     GLC.compileShader(vertexShader);
 
-    let fragmentShader = GLC.createFragmentShader();
+    const fragmentShader = GLC.createFragmentShader();
     GLC.addShaderSource(fragmentShader, FragmentSource);
     GLC.compileShader(fragmentShader);
 
@@ -37,8 +36,6 @@ class ModelShader {
   };
 
   enableTransformationMatrix = matrix => {
-    return GLC.uploadMatrix4fv(this.transformationMatrix, matrix);
+    GLC.uploadMatrix4fv(this.transformationMatrix, matrix);
   };
 }
-
-export default ModelShader;

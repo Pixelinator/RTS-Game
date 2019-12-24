@@ -1,7 +1,7 @@
 import GLC from "../../GLCommander";
 import Shader from "../../Shaders/ModelShader/ModelShader";
 
-class ModelRenderer {
+export default class ModelRenderer {
   constructor() {
     this.shader = new Shader();
     this.models = {};
@@ -39,5 +39,3 @@ class ModelRenderer {
     });
   };
 }
-
-export default ModelRenderer;

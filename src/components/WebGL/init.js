@@ -4,7 +4,7 @@ import ModelType from "./Models/ModelType/ModelType";
 import ModelInstance from "./Models/ModelInstance/ModelInstance";
 
 export default id => {
-  const canvas = document.querySelector("#" + id);
+  const canvas = document.querySelector(`#${id}`);
 
   if (!canvas) {
     return;
@@ -19,17 +19,18 @@ export default id => {
   GLC.init(gl);
 
   const vertices = [0.0, 0.5, 0.0, -0.5, -0.5, 0.0, 0.5, -0.5, 0.0];
+
   const indices = [0, 1, 2];
 
-  const modelRenderer = new ModelRenderer();
-  modelRenderer.registerNewModel(new ModelType(vertices, indices), "triangle");
-  const instance = new ModelInstance(0, 0, 0, 0, 0, 0, 1);
-  modelRenderer.addInstance(instance, "triangle");
+  const modelRender = new ModelRenderer();
+  modelRender.registerNewModel(new ModelType(vertices, indices), "triangle");
+  const instance = new ModelInstance(0, 0, 0, 0, 0, 0, 1.0);
+  modelRender.addInstance(instance, "triangle");
 
   const render = () => {
     GLC.clear(1.0, 1.0, 1.0, 1.0);
     instance.updateRotation(1, 1, 1);
-    modelRenderer.render();
+    modelRender.render();
     window.requestAnimationFrame(render);
   };
 

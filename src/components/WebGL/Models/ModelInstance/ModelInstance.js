@@ -1,6 +1,6 @@
 import { createTransformationMatrix } from "../../Utils/maths";
 
-class ModelInstance {
+export default class ModelInstance {
   constructor(x, y, z, rx, ry, rz, scale) {
     this.x = x;
     this.y = y;
@@ -30,9 +30,5 @@ class ModelInstance {
     );
   };
 
-  getTransformationMatrix = () => {
-    this.transformationMatrix;
-  };
+  getTransformationMatrix = () => this.transformationMatrix;
 }
-
-export default ModelInstance;
