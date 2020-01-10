@@ -1,3 +1,4 @@
+// Main Render Loop
 import GLC from "./GLCommander";
 import ModelRenderer from "./Render/ModelRenderer/ModelRenderer";
 import ModelType from "./Models/ModelType/ModelType";

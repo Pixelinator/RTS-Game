@@ -5,3 +5,5 @@ dist/
 
 .vscode/
 jest-stare/
+
+.DS_Store
